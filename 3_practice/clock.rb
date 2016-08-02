@@ -3,7 +3,7 @@ require 'pry'
 
 class Clock
   MINUTES = (0..59)
-  HOURS = (0..22)
+  HOURS = (0..23)
 
   def self.at(hour, minute = 0)
     new(hour, minute)
@@ -67,6 +67,7 @@ class Clock
   end
 
   def update_time(added_minutes)
+    #binding.pry
     add_min = added_minutes.abs % 60
     add_hour = added_minutes.abs / 60
 
